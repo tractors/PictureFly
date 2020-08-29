@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PictureFly</string>
+    <string name="photo_tag">%d / %d </string>
+</resources>
