@@ -19,6 +19,7 @@ import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import kotlinx.android.synthetic.main.fragment_pager_photo.*
 import kotlinx.android.synthetic.main.pager_photo_view.view.*
@@ -59,6 +60,8 @@ class PagerPhotoFragment : Fragment() {
         //设置当前列的位置数据
         viewPager2.setCurrentItem(arguments?.getInt("PHOTO_POSITION") ?: 0, false)
 
+        //设置滚动的方向
+        viewPager2.orientation = ViewPager2.ORIENTATION_VERTICAL
         // 去掉滑动到边的动画阴影的方法
         viewPager2.apply {
             (getChildAt(0) as? RecyclerView)?.overScrollMode = RecyclerView.OVER_SCROLL_NEVER
